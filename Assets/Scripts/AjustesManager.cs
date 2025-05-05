@@ -13,6 +13,10 @@ public class AjustesManager : MonoBehaviour
     public AudioSource AudioPartido;
     public AudioSource AudioFinPartido;
 
+
+    private bool isMuted = false;
+    public Text buttonText;
+
     public void PanelOptions()
     {
         Time.timeScale = 0;
@@ -49,6 +53,19 @@ public class AjustesManager : MonoBehaviour
 
     }
 
+    public void Silenciar()
+    {
+        isMuted = !isMuted;  // Alterna el estado de mute (si está activado, lo desactiva, y viceversa)
+
+        AudioMenu.mute = isMuted;
+        AudioPartido.mute = isMuted;
+
+        if (buttonText != null)
+        {
+            buttonText.text = isMuted ? "Activar sonido" : "Silenciar sonido";
+        }
+    }
+
     public void ReiniciarPartido() //Crear escena Menu principal
     {
         Time.timeScale = 1;
@@ -81,7 +98,7 @@ public class AjustesManager : MonoBehaviour
     /**public void SalirdelJuego()
     {
         Application.Quit();
-    }**/
+    }*/
 
     public void PlaySound()
     {

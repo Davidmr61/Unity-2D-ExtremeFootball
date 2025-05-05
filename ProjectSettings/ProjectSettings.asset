@@ -769,11 +769,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: 
+  cloudProjectId: 212e0eee-d4d8-4683-b441-012ab95b07d8
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 
-  organizationId: 
+  projectName: Unity-2D-ExtremeFootball
+  organizationId: david_m_r
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   playerDataPath: 
